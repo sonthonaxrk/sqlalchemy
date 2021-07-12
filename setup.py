@@ -115,11 +115,7 @@ def status_msgs(*msgs):
 with open(
     os.path.join(os.path.dirname(__file__), "lib", "sqlalchemy", "__init__.py")
 ) as v_file:
-    VERSION = (
-        re.compile(r""".*__version__ = ["'](.*?)['"]""", re.S)
-        .match(v_file.read())
-        .group(1)
-    )
+    VERSION = "1.4.18"
 
 
 def run_setup(with_cext):
