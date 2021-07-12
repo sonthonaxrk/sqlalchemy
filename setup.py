@@ -112,12 +112,6 @@ def status_msgs(*msgs):
     print("*" * 75)
 
 
-with open(
-    os.path.join(os.path.dirname(__file__), "lib", "sqlalchemy", "__init__.py")
-) as v_file:
-    VERSION = "1.4.18"
-
-
 def run_setup(with_cext):
     kwargs = {}
     if with_cext:
@@ -131,7 +125,7 @@ def run_setup(with_cext):
 
         kwargs["ext_modules"] = []
 
-    setup(version=VERSION, cmdclass=cmdclass, distclass=Distribution, **kwargs)
+    setup(version="1.4.20", cmdclass=cmdclass, distclass=Distribution, **kwargs)
 
 
 if not cpython:
